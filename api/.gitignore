@@ -4,6 +4,7 @@
 /storage/*.key
 /stubs
 /vendor
+/reports
 .env
 .env.backup
 .phpunit.result.cache
