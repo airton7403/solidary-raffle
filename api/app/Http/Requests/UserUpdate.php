@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use App\Models\User;
 
 class UserUpdate extends FormRequest
 {
@@ -25,7 +26,7 @@ class UserUpdate extends FormRequest
     {
         return [
             'name' => ['required'],
-            'email' => ['unique:users', 'email', 'required']
+            'email' => ['email', 'required', 'unique:users,email,'.$this->id]
         ];
     }
 }

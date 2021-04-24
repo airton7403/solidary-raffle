@@ -51,7 +51,7 @@ class UserController extends Controller
      */
     public function update(UserUpdate $request, User $user)
     {
-        $user->update($request->all());
+        $user->update($request->validated());
         return new UserResource($user);
     }
 
